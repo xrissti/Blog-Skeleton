@@ -1,4 +1,5 @@
 ﻿using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Firefox;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,7 +17,7 @@ namespace Blog.UI.Tests
 
         static BrowseHost()
         {
-            Instance.Run("Blog", 60634, w => w.WithRemoteWebDriver(() => new ChromeDriver()));
+            Instance.Run("Blog", 60634, w => w.WithRemoteWebDriver(() => new FirefoxDriver()));
         }
     }
 }
